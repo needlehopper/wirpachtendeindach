@@ -1,0 +1,22 @@
+{
+  "rewrites": [
+    { "source": "/blog", "destination": "/blog.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/ueber-uns", "destination": "/ueber-uns.html" },
+    { "source": "/impressum", "destination": "/impressum.html" },
+    { "source": "/datenschutz", "destination": "/datenschutz.html" },
+    { "source": "/submit-lead.php", "destination": "/api/submit-lead" },
+    { "source": "/((?!assets|blog|api|favicon|apple|sun-|robots|sitemap|_).*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ]
+}
