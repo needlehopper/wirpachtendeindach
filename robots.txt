@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://wirpachtendeindach.de/sitemap.xml
+
+# Disallow admin areas
+# Disallow: /admin/
